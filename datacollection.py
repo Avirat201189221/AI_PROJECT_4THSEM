@@ -2,8 +2,8 @@ import cv2
 import numpy as np 
 import math as m
 from cvzone.HandTrackingModule import HandDetector
-from datetime import datetime
-import random as r
+# from datetime import datetime
+# import random as r
 
 cap=cv2.VideoCapture(0)#capture object
 
@@ -26,10 +26,10 @@ while(True):
         if(x>offset and y>offset):
             imgcrop=img[y-offset:y+h+offset,x-offset:x+w+20] #img is basically a matrix with height and width paramters with stating and ending ones offset is an offset  
 
-            handShape=imgcrop.shape #.shape is a matrix with 3 colunns height width and channel
+            # handShape=imgcrop.shape #.shape is a matrix with 3 colunns height width and channel
 
             aspectratio=h/w
-            if(aspectratio>=1): #if height >width
+            if(aspectratio>=1): #if height >=width
                 k=imgSize/h
                 wCal=m.ceil((k*w))
                 imgResize=cv2.resize(imgcrop,(wCal+1,imgSize))

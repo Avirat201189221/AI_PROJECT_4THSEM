@@ -16,7 +16,7 @@ folder="data/"
 labels=("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," ",".")
 
 while(True):
-    success,img =cap.read()
+    success,img =cap.read()#success is boolean variable and img is array of every pixel 
     if(success):
         imgOutput=img.copy()
         hands,img= detector.findHands(img) #hands is the list of all hands 
